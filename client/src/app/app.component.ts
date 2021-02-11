@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  title = 'client';
+  title = 'The Dating App';
 
   users: any;
 
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   }
 
   getUsers() {
-    this.http.get('http://localhost:5000/api/users').subscribe(resp => {
+    this.http.get('https://localhost:5001/api/users').subscribe(resp => {
       this.users = resp;
       console.log(resp);
     },
